@@ -69,6 +69,7 @@ public class BarcodeScanManager : MonoBehaviour
     if (!camExists)
       return;
 
+    /*  Rotate camera input to be correct side up  */
     CameraDisplayPanel.transform.rotation = baseRotation * Quaternion.AngleAxis(webcamTexture.videoRotationAngle, Vector3.back);
 
     /* Convert image color32[] array to byte array and parse it to the barcode reader!*/
